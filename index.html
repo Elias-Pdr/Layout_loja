@@ -13,28 +13,46 @@
             <p>2% OFF + FRETE GRÁTIS PARA TODO BRASIL!</p>
         </div>
         <div id="main_header">
-            <img src="https://img.mycartpanda.com/unsafe/https://assets.mycartpanda.com/static/theme_images/ea/b8/00/181199_6213364540.png" alt="">
+            <div id="container_menuLogo">
+
+                <button id="btn_menu" onclick="appear('menu_container', 'block'), menuOpen()">
+                    <div class="animated-icon1"></div>
+                    <span id="barra1" style="background-color: black"></span>
+                    <span id="barra2" style="background-color: black"></span>
+                    <span id="barra3" style="background-color: black"></span>
+                </button>
+
+                <div id="container_imag"><img src="https://img.mycartpanda.com/unsafe/https://assets.mycartpanda.com/static/theme_images/ea/b8/00/181199_6213364540.png" alt=""></div>
+            </div>
             <a href="#">Eletrônicos</a>
             <a href="#">Roupas</a>
             <a href="#">Outros</a>
 
             <div id="container_icons">
+
+                <button  onclick="appear('search_formUI2', 'flex')" id="btn_search">
+                    <svg viewBox="0 0 31.5 31.5" id="search_searchIcon">
+                        <path d="M22.5 12.855a9.643 9.643 0 10-9.643 9.643 9.673 9.673 0 009.643-9.643zm.48 7.873l8.041 8.041a1.591 1.591 0 11-2.25 2.25l-8.041-8.041a12.331 12.331 0 01-7.873 2.738 12.858 12.858 0 1112.854-12.862 12.309 12.309 0 01-2.731 7.873z"></path>
+                    </svg>
+                </button>
+
                 <form id="search_formUI">
                     <input type="text" placeholder="busque aqui seu produto..." id="search_inputUI">
                     <button id="search_searchButtonUI">
-                        <svg viewBox="0 0 31.5 31.5" aria-labelledby="searchIcon searchDesc" id="search_searchIcon">
-                            <path fill="inherit" d="M22.5 12.855a9.643 9.643 0 10-9.643 9.643 9.673 9.673 0 009.643-9.643zm.48 7.873l8.041 8.041a1.591 1.591 0 11-2.25 2.25l-8.041-8.041a12.331 12.331 0 01-7.873 2.738 12.858 12.858 0 1112.854-12.862 12.309 12.309 0 01-2.731 7.873z"></path>
+                        <svg viewBox="0 0 31.5 31.5" id="search_searchIcon">
+                            <path d="M22.5 12.855a9.643 9.643 0 10-9.643 9.643 9.673 9.673 0 009.643-9.643zm.48 7.873l8.041 8.041a1.591 1.591 0 11-2.25 2.25l-8.041-8.041a12.331 12.331 0 01-7.873 2.738 12.858 12.858 0 1112.854-12.862 12.309 12.309 0 01-2.731 7.873z"></path>
                         </svg>
                     </button>
+
                 </form>
-                <svg class="icon_header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="icon_header" id="conta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                     <circle cx="12" cy="7" r="4"></circle>
                 </svg>
-                <svg class="icon_header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="icon_header" id="favoritos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                 </svg>
-                <svg class="icon_header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="icon_header" id="carrinho" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="10" cy="20.5" r="1"></circle>
                     <circle cx="18" cy="20.5" r="1"></circle>
                     <path d="M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1"></path>
@@ -42,6 +60,86 @@
             </div>
 
         </div>
+
+        <div id="menu_container">
+            <nav>
+                <a href="">Ver todos os produtos</a>
+                <a href="">Eletrônicos</a>
+                <a href="">Roupas e acessórios</a>
+                <a href="">Setup</a>
+                <hr>
+                <div class="container_iconMenu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" class="icon-account " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <a href="">Conta</a>
+                </div>
+                <div class="container_iconMenu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" class="icon-heart " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    <a href="">Lista de desejos</a>
+                </div>
+                <div class="container_iconMenu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+                    </svg>
+                    <a href="">WhatsApp (24)99842-8760</a>
+                </div>
+                <div class="container_iconMenu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"></path>
+                    </svg>
+                    <a href="">Email</a>
+                </div>
+            </nav>
+            <div id="shadow"></div>
+        </div>
+
+        <form id="search_formUI2">
+            <input type="text" placeholder="busque aqui seu produto..." id="search_inputUI2">
+            <button id="search_searchButtonUI">
+                <svg viewBox="0 0 31.5 31.5" aria-labelledby="searchIcon searchDesc" id="search_searchIcon">
+                    <path fill="inherit" d="M22.5 12.855a9.643 9.643 0 10-9.643 9.643 9.673 9.673 0 009.643-9.643zm.48 7.873l8.041 8.041a1.591 1.591 0 11-2.25 2.25l-8.041-8.041a12.331 12.331 0 01-7.873 2.738 12.858 12.858 0 1112.854-12.862 12.309 12.309 0 01-2.731 7.873z"></path>
+                </svg>
+            </button>
+        </form>
     </header>
+
+    <script>
+
+        function menuOpen() {
+            const barra1 = document.getElementById("barra1")
+            const barra2 = document.getElementById("barra2")
+            const barra3 = document.getElementById("barra3")
+
+            if(barra2.style.display == 'none'){ 
+                barra1.style.transform = 'rotate(0deg)'
+                barra2.style.display = 'block'
+                barra3.style.transform = 'rotate(0deg)'
+            }else{
+                barra1.style.transform = 'rotate(50deg)'
+                barra2.style.display = 'none'
+                barra3.style.transform = 'rotate(-50deg)'
+            }
+        }
+
+        function appear(id_obj, displayType) {
+            if(document.getElementById(id_obj).style.display == 'block' || document.getElementById(id_obj).style.display == 'flex'){
+                document.getElementById(id_obj).style.display = 'none'
+            }else{
+                document.getElementById(id_obj).style.display = displayType
+            }
+
+            if(id_obj == 'search_formUI2' && document.getElementById('menu_container').style.display == 'block'){
+                document.getElementById('menu_container').style.display = 'none'
+            }
+            if(id_obj == 'menu_container' && document.getElementById('search_formUI2').style.display == 'flex'){
+                document.getElementById('search_formUI2').style.display = 'none'
+            }
+            
+        }
+    </script>
 </body>
 </html>

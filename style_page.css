@@ -8,7 +8,8 @@ body{
     background-color: rgba(199, 11, 49, 0.11);
 }
 header{
-    background-color: rgba(165, 42, 42, 0.171);
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 4px;
 }
 #promocao{
     background-color: black;
@@ -22,23 +23,69 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 8px 0px;
+    padding: 8px 20px;
 
 }
-#main_header > img{
-    width: 200px;
+#container_menuLogo{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+#btn_menu{
+    display: none;
+    width: 35px;
+    height: 35px;
+    margin: 0px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+#btn_menu span{
+    display: block;
+    width: 22px;
+    height: 3px;
+    border-radius: 0;
+    margin: 4px 0;
+    margin-right: -3px;
+    margin-left: 3px;
+}
+#btn_menu span:first-of-type{
+    transition: all .5s;
+}
+#btn_menu span:nth-of-type(2){
+    transition: all .2s;
+}
+#btn_menu span:nth-of-type(3){
+    transition: all .2s;
+}
+#container_imag{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+#container_imag > img{
+    width: 180px;
+    margin: 0px 20px;
+
 }
 
 #main_header a{
     text-decoration: none;
     color: black;
+    margin: 0px 10px;
+
 }
 #container_icons{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 50%;
+    margin: 0px 20px;
 }
-#search_formUI{
+
+#search_formUI, #search_formUI2{
     background: none;
     display: flex;
     align-items: center;
@@ -46,8 +93,15 @@ header{
     border: 1px solid rgb(148, 148, 148);
     padding: 10px 14px;
     margin: 3px 10px;
+    width: 80%;
 }
-#search_inputUI{
+#search_formUI2{
+    width: 96%;
+    margin: 8px auto;
+    display: none;
+}
+
+#search_inputUI, #search_inputUI2{
     background: none;
     outline: none;
     width: 100%;
@@ -57,13 +111,16 @@ header{
     display: flex;
     align-items: center;
 }
-#search_searchButtonUI{
+#search_searchButtonUI, #btn_search{
     background: none;
     width: 40px;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+#btn_search{
+    display: none;
 }
 #search_searchIcon{
     fill: rgb(43, 43, 43);
@@ -72,8 +129,96 @@ header{
     cursor: pointer;
 }
 .icon_header{
-    width: 22px;
-    height: 22px;
+    width: 30px;
+    height: 30px;
     fill: none;
     margin: 0px 10px;
+}
+#menu_container{
+    display: none;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+}
+nav > a{
+    text-decoration: none;
+    color: black;
+    margin: 12px 0px;
+}
+nav a:hover{
+    color: red;
+}
+
+hr{
+    margin: 10px 0px;
+}
+.container_iconMenu{
+    display: flex;
+    align-items: center;
+    margin: 12px 0px;
+}
+
+.container_iconMenu a{
+    text-decoration: none;
+    color: black;
+    margin-left: 15px;
+}
+#shadow{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background: rgba(0,0,0,.75);
+}
+@media only screen and (max-width: 950px){
+    #main_header a{
+       display: none;
+    }
+    #btn_menu{
+        display: block;
+    }
+    #favoritos, #conta{
+        display: none;
+    }
+    #container_icons{
+        justify-content: flex-end;
+        width: 100%;
+    }
+    #search_formUI{
+        width: 100%;
+
+    }
+    #main_header{
+        justify-content: space-between;
+    }
+    
+}
+@media only screen and (max-width: 660px){
+    #search_inputUI{
+        display: none;
+    }
+    #search_formUI{
+        display: none;
+
+    }
+    #btn_search{
+        display: flex;
+    }
+    #container_icons{
+        width: fit-content;
+    }
+    #container_imag{
+        width: 100%;
+        justify-content: center;
+    }
+    #container_menuLogo{
+        width: 100%;
+    }
+
+
+
 }
