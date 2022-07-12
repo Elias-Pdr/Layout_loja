@@ -1,0 +1,79 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgba(199, 11, 49, 0.11);
+}
+header{
+    background-color: rgba(165, 42, 42, 0.171);
+}
+#promocao{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    padding: 12px 0px;
+    font-size: 14px;
+}
+#main_header{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px 0px;
+
+}
+#main_header > img{
+    width: 200px;
+}
+
+#main_header a{
+    text-decoration: none;
+    color: black;
+}
+#container_icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search_formUI{
+    background: none;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid rgb(148, 148, 148);
+    padding: 10px 14px;
+    margin: 3px 10px;
+}
+#search_inputUI{
+    background: none;
+    outline: none;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
+#search_searchButtonUI{
+    background: none;
+    width: 40px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#search_searchIcon{
+    fill: rgb(43, 43, 43);
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+}
+.icon_header{
+    width: 22px;
+    height: 22px;
+    fill: none;
+    margin: 0px 10px;
+}
