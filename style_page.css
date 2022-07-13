@@ -170,7 +170,7 @@ hr{
     display: block;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     opacity: 1;
     background: rgba(0,0,0,.75);
 }
@@ -328,51 +328,60 @@ hr{
 }
 
 
+
+
+
 #container_footer{
     display: flex;
+    flex-direction: row;
     width: 90%;
     margin: auto;
-    margin-bottom: 30px;
-
 }
-#container_footer > div{
+#footerContainer_flex{
     display: flex;
-    align-items: center;
-    width: 25%;
-    margin: 20px;
+    width: 50%;
 }
 
-#container_footer svg{
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-    fill: currentColor;
-    color:  #E92222;
-}
-#container_footer span{
+#container_svg{
     display: flex;
-    justify-content: center;
+    width: 50%;
+    margin: 0px 10px;
+}
+#container_svg span{
+    display: flex;
     flex-direction: column;
-    width: fit-content;
-    width: 100%;
-
-
+    justify-content: center;
 }
 
-#container_footer h1{
+#container_svg svg{
+    width: 40px;
+    height: 40px;
+    margin: 16px;
+    fill: currentColor;
+    color:  #E92222;   
+}
+
+#container_svg h1{
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 5px;
 }
-#container_footer p{
+#container_svg p{
+    text-align: start;
     font-size: 16px;
     font-weight: normal;
 }
+
+
+
 #container_cnpj{
+    margin-top: 30px;
     background-color: black;
     color: #cfcfcf;
     text-align: center;
     padding: 10px;
+    font-size: 14px;
+
 }
 
 
@@ -397,8 +406,38 @@ hr{
     #main_header{
         justify-content: space-between;
     }
+    #container_footer{
+        flex-direction: row;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+    }
+    #footerContainer_flex{
+        flex-direction: column;
+        height: 50%;
+    }
+    #container_svg{
+        margin: 10px 0px;
+        width: 100%;
+    }
     
 }
+@media only screen and (max-width: 1100px){
+
+    #container_footer{
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+    #container_svg{
+        margin-bottom: 20px;
+    }
+    #footerContainer_flex{
+        width: 100%;
+    }
+    
+}
+
 @media only screen and (max-width: 660px){
     #search_inputUI{
         display: none;
@@ -420,7 +459,5 @@ hr{
     #container_menuLogo{
         width: 100%;
     }
-
-
 
 }
