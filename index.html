@@ -108,7 +108,7 @@
     </header>
 
     <main>
-        <div id="container_imagMain">
+        <div id="container_imagBanner">
             <img src="https://img.mycartpanda.com/unsafe/1600x0/https://assets.mycartpanda.com/static/theme_images/ea/b8/00/181199_2753566541.png" alt="">
         </div>
         <div id="mostBought_container">
@@ -178,9 +178,37 @@
                     </div>
                 </section>
 
+                <button id="btn_maisDetalhes" onclick="MudaCor('white'), appear('detalhesProduto', 'block')" onclick="appear('detalhesProduto', 'block')">
+                    <span>
+                        <p>Detalhes do produto</p>
+                    </span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16"><path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"></path></svg>
+                    </span>
+                </button>
+                <div id="detalhesProduto">
+                    <p>O Casaco de Moletom Galáxia Nebulosa da Nike é um produto com estética Streetwear e acabamento de alta qualidade. Produzida em malha 50% algodão e 50% poliéster, possui 315g/cm².  Por se tratar de um produto Premium, proporciona um toque super macio e confortável.</p>
+                    <br>
+                    <p>O seu tingimento é feito utilizando o método reativo, isso significa que esse processo apresenta, como principal característica, a fusão dos corantes e pigmentos com a fibra, reduzindo o desbotamento, ou perda significativa da cor original ao longo do tempo.</p>
+                    <br>
+                    <p>As estampas possuem um estilo único e são aplicadas em silk de alta definição.</p>
+                    <br>
+                    <p>ESTILO, QUALIDADE E CONFORTO...</p>
+                    <br>
+                        <ul>
+                            <li>Tecido de altíssima qualidade</li>
+                            <li>Produto Personalizado</li>
+                            <li>50% algodão 50% Poliéster</li>
+                            <li>Com Capuz Forrado</li>
+                            <li>Tecido Quente e confortável</li>
+                            <li>Incrível acabamento</li>
+                        </ul>
+                </div>
 
             </div>
         </div>
+        <hr>
+
     </main>
 
     <footer>
@@ -270,6 +298,7 @@
         }
 
         function appear(id_obj, displayType) {
+            console.log('aqui');
             if(document.getElementById(id_obj).style.display == 'block' || document.getElementById(id_obj).style.display == 'flex'){
                 document.getElementById(id_obj).style.display = 'none'
             }else{
@@ -285,6 +314,18 @@
                 document.getElementById('search_formUI2').style.display = 'none'
             }
             
+        }
+    
+        function MudaCor(cor) {
+            if(document.getElementById('btn_maisDetalhes').style.backgroundColor == cor){
+                document.getElementById('btn_maisDetalhes').style.backgroundColor = '#dadada'
+                document.getElementById('btn_maisDetalhes').style.borderBottomColor = 'rgba(0,0,0,.125)'
+
+            }else{
+                document.getElementById('btn_maisDetalhes').style.backgroundColor = cor
+                document.getElementById('btn_maisDetalhes').style.borderBottomColor = '#FFF'
+            }
+
         }
     </script>
 </body>
