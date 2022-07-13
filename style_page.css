@@ -5,7 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
-    background-color: rgba(199, 11, 49, 0.11);
+    background-color: rgba(255, 255, 255, 0.11);
 }
 header{
     background-color: rgb(255, 255, 255);
@@ -174,6 +174,159 @@ hr{
     opacity: 1;
     background: rgba(0,0,0,.75);
 }
+#container_imagMain img{
+    width: 100%;
+}
+#mostBought_container{
+    margin-bottom: 50px;
+}
+#mostBought_txt{
+    margin: 30px;
+    text-align: center;
+}
+#mostBought_txt h1{
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+#mostBought_txt p{
+    font-size: 16px;
+    font-weight: normal;
+    color: #6C757D;
+}
+#mostBought_item section{
+    display: flex;
+    justify-content: center;
+}
+#container_flex{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+
+}
+#container_item {
+    width: 50%;
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: 6px;
+    margin-right: 30px;
+}
+#container_item:hover {
+    border: 1px solid rgb(117, 117, 117);
+
+}
+
+#container_item img{
+    width: 450px;
+    height: 450px;
+    border-radius: 6px;
+
+}
+
+#container_infos{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#container_avaliacao{
+    display: flex;
+    align-items: flex-end;
+    margin: 15px 0px;
+}
+#container_preco{
+    margin: 15px 0px;
+}
+#economia_product{
+    font-size: 12px;
+    background-color: #29B62A;
+    display: inline;
+    padding: 2px 6px;
+    color: white;
+    border-radius: 10px;
+}
+#economia_product span{
+    font-weight: bold;
+}
+#nome_product{
+    font-size: 32px;
+}
+#star_product{
+    font-size: 20px;
+    color: #fbc02d;
+    font-weight: 900;
+    margin-right: 10px;
+}
+#avaliacao_product{
+    font-size: 16px;
+    color: #6C757D;
+    font-style: italic;
+}
+#precoAntigo_product{
+    font-size: 16px;
+    color: #B3B3B3;
+    font-weight: 500;
+    margin-right: 20px;
+    text-decoration: line-through;
+
+}
+#precoAtual_product{
+    font-size: 28px;
+    color: #29B62A;
+    font-weight: 800;
+}
+#estimativaEntrega{
+    color: #4A4A4A;
+    font-size: 14px;
+}
+#garantia_txt{
+    color: #808080;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+#size_container{
+    margin: 10px 0px;
+}
+
+#size_container p{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+#size_container button{
+    font-size: 16px;
+    color: #FF0000;
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 7px 10px;
+    text-align: center;
+}
+
+
+
+#btn_comprar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+    padding: 10px;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    border-radius: 6px;
+    font-weight: 400;
+    background-color: transparent;
+    font-size: 1rem;
+}
+#btn_comprar svg{
+    margin-right: 10px;
+}
+
+#btn_comprar:hover{
+    color: #ffffff;
+    background-color: #dc3545;
+}
+
 @media only screen and (max-width: 950px){
     #main_header a{
        display: none;
