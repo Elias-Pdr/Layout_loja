@@ -233,10 +233,10 @@ hr{
     background-color: #ececec50;
     border-bottom: 1px solid #2125295d;
 }
-#scoll{
+#scroll{
     overflow: auto;
     padding: 20px 0px;
-
+    width: 100%;
 }
 #container_avaliacao{
     display: flex;
@@ -345,7 +345,7 @@ hr{
     background-color: transparent;
 }
 #container_datalhes, #container_clasificacao{
-    background-color: #dadada;
+    background-color: #ffffff5e;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 6px;
 }
@@ -359,7 +359,7 @@ hr{
     border: 1px solid transparent;
     border-radius: 6px;
     font-weight: bold;
-    background-color: #dadada;
+    background-color: #ffffff5e;
     font-size: 14pt;
     width: 100%;
 }
@@ -613,5 +613,25 @@ hr{
     #container_menuLogo{
         width: 100%;
     }
-
+    #container_flex {
+        width: 100%;
+    }
+    #container_item {
+        width: 90%;
+    }
+    #container_infos {
+        width: 95%;
+    }
+    #detalhesProduto {
+        width: 95%;
+    }
+    .avaliação_product {
+        width: 94%;
+    }
+    .reviews_desc {
+        margin: 10px 20px;
+    }
+    .avaliacao_cliente {
+        margin: 8px 20px;
+    }
 }
