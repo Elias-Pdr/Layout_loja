@@ -579,19 +579,31 @@ hr{
         max-height: 100%;
     }
     #container_item{
-        width: 80%;
+        width: 90%;
         margin: auto;
     }
     #container_infos{
-        width: 80%;
+        width: 95%;
         margin: auto;
         margin-top: 30px;
     }
     #detalhesProduto{
-        width: 68%;
+        width: 95%;
         margin-top: 10px;
     }
+
+    .avaliação_product {
+        width: 94%;
+    }
+    .reviews_desc {
+        margin: 10px 20px;
+    }
+    .avaliacao_cliente {
+        margin: 8px 20px;
+    }
 }
+
+
 @media only screen and (max-width: 660px){
     #search_inputUI{
         display: none;
@@ -616,22 +628,5 @@ hr{
     #container_flex {
         width: 100%;
     }
-    #container_item {
-        width: 90%;
-    }
-    #container_infos {
-        width: 95%;
-    }
-    #detalhesProduto {
-        width: 95%;
-    }
-    .avaliação_product {
-        width: 94%;
-    }
-    .reviews_desc {
-        margin: 10px 20px;
-    }
-    .avaliacao_cliente {
-        margin: 8px 20px;
-    }
+
 }
