@@ -113,10 +113,413 @@
         </div>
 
         <div id="mostBought_container">
-            <div id="mostBought_txt">
+            <div id="titulo_txt">
                 <h1>Produto mais vendido de todos os tempos</h1>
                 <p>Frete grátis!</p>
             </div>
+            <div id="mostBought_item">
+                <section>
+                    <div id="container_flex">
+                        <div id="container_item" class="hover_border">
+                            <img src="https://img.mycartpanda.com/unsafe/720x720/https://assets.mycartpanda.com/static/products_images/21/30/cb/1653841695.jpg" alt="">
+                        </div>
+                        <div id="container_infos">
+                            <div id="scroll">
+                                <p id="nome_product">HEADSET GAMER - Onikuma K8 camuflagem branca com luz rgb LED</p>
+                                <span id="container_avaliacao">
+                                    <div class="container_star">
+                                        <img src="imagens/Estrela.png" alt="">
+                                        <img src="imagens/Estrela.png" alt="">
+                                        <img src="imagens/Estrela.png" alt="">
+                                        <img src="imagens/Estrela.png" alt="">
+                                        <img src="imagens/Estrela.png" alt="">
+                                    </div>
+                                    <p id="avaliacao_product">89 avaliações</p>
+                                </span>
+                                <span id="container_preco">
+                                    <p id="precoAntigo_product">R$ 140,90 BRL</p>
+                                    <p id="precoAtual_product">R$ 99,80 BRL</p>
+                                    <p id="economia_product">Economize <span>R$ 41,11 BRL</span></p>
+                                </span>
+                                <p id="estimativaEntrega">Chegará entre: <strong>18</strong> e <strong>23 de julho</strong>.</p>
+                                
+                                <div id="garantia_txt" style="margin: 6px 0px;">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                                        <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                    <p style="margin-left: 5px;">
+                                        180 Dias de Garantia
+                                    </p>
+                                </div>
+                                <div id="garantia_txt" style="margin-bottom: 6px;">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bootstrap-reboot" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M1.161 8a6.84 6.84 0 1 0 6.842-6.84.58.58 0 0 1 0-1.16 8 8 0 1 1-6.556 3.412l-.663-.577a.58.58 0 0 1 .227-.997l2.52-.69a.58.58 0 0 1 .728.633l-.332 2.592a.58.58 0 0 1-.956.364l-.643-.56A6.812 6.812 0 0 0 1.16 8zm5.48-.079V5.277h1.57c.881 0 1.416.499 1.416 1.32 0 .84-.504 1.324-1.386 1.324h-1.6zm0 3.75V8.843h1.57l1.498 2.828h1.314L9.377 8.665c.897-.3 1.427-1.106 1.427-2.1 0-1.37-.943-2.246-2.456-2.246H5.5v7.352h1.141z"></path>
+                                    </svg>
+                                    <p style="margin-left: 5px;">
+                                        7 dias para trocas e devoluções
+                                    </p>
+                                </div>
+                                
+                                
+                                <button id="btn_comprar" style="margin-top: 50px;">
+                                    <span style="display: flex;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" class="icon-bag mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3.8 6h16.4M16 10a4 4 0 1 1-8 0"></path></svg>
+                                    </span>
+                                    <span>
+                                        <p>Comprar agora</p>
+                                    </span>
+                                </button>
+
+                                <div id="container_datalhes">
+                                    <button class="btn_maisDetalhes" id="headset" onclick="appear('detalhesProduto_headset', 'block')" onclick="appear('detalhesProduto_headset', 'block')">
+                                        <span>
+                                            <p>Detalhes do produto</p>
+                                        </span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16"><path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"></path></svg>
+                                        </span>
+                                    </button>
+                                    <div class="detalhesProduto" id="detalhesProduto_headset">
+                                        <p>PROCURANDO UM HEADSET CONFORTÁVEL, COM UM MICROFONE E SOM CRISTALINOS PAR JOGAR OU CURTIR AQUELA MÚSICA COM GRAVES FORTES QUE NÃO CUSTE OS OLHOS DA CARA? ENTÃO VOCÊ ENCONTROU :)</p>
+                                        <br>
+                                        <p>Com os Onikuma K8, você não perde nenhum detalhe e ouve o áudio como ele foi projetado pelos criadores do jogo, além de ser desenvolvido com espumas ultra confortáveis que não apertam nem machucam suas orelhas... </p>
+                                        <br>
+                                        <p>Sinta a adrenalina ao mergulhar na cena de outra maneira! Ter fones de ouvido desenvolvidos para jogos muda completamente sua experiência em cada jogo.</p>
+                                        <br>
+                                        <p>Sendo headset, você poderá ouvir suas músicas favoritas, manter ligações e jogar on-line sem perder nenhum detalhe.</p>
+                                        <br>
+                                            <ul>
+                                                <li>Consoles compatível: PC, Xbox One, PS4, smartphone.</li>
+                                                <li>Inclui microfone.</li>
+                                                <li>50% algodão 50% Poliéster</li>
+                                                <li>Comprimento do cabo: 2.2m.</li>
+                                                <li>Confortável e prático.</li>
+                                            </ul>
+                                    </div>
+                                </div>
+
+                                <div id="container_clasificacao" style="margin-top: 10px;">
+                                    <button id="btn_avaliacoes"  onclick=" appear('avaliacaoProduto_headset', 'flex')" onclick="appear('detalhesProduto_headset', 'block')">
+                                        <span>
+                                            <p>Avaliações de clientes</p>
+                                        </span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16"><path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"></path></svg>
+                                        </span>
+                                    </button>
+                                    <div id="avaliacaoProduto_headset">
+                                        <div id="graficos">
+                                            <p style="font-size: 24px;"> Avaliações de clientes </p>
+                                            <p style="font-size: 40px;"> 5.0 </p>
+                                            <div style="margin: 8px 0px;" class="container_star">
+                                                <img src="imagens/Estrela.png" alt="">
+                                                <img src="imagens/Estrela.png" alt="">
+                                                <img src="imagens/Estrela.png" alt="">
+                                                <img src="imagens/Estrela.png" alt="">
+                                                <img src="imagens/Estrela.png" alt="">
+                                            </div>
+                                            <p style="font-size: 16px;"> Baseado em 89 avaliações </p>
+                                            <div id="container_avaliacoes">
+                                                <span>
+                                                    <p style="color: #fbc02d; margin-right: 4px;">★</p>
+                                                    <p>5</p>
+                                                    <div id="container_bar">
+                                                        <div id="container_progress" style=" width: 100%"></div>
+                                                    </div>
+                                                </span>
+                                                <span>
+                                                    <p style="color: #fbc02d; margin-right: 4px;">★</p>
+                                                    <p>4</p>
+                                                    <div id="container_bar">
+                                                        <div id="container_progress" style=" width: 0%"></div>
+                                                    </div>
+                                                </span>
+                                                <span>
+                                                    <p style="color: #fbc02d; margin-right: 4px;">★</p>
+                                                    <p>3</p>
+                                                    <div id="container_bar">
+                                                        <div id="container_progress" style=" width: 0%"></div>
+                                                    </div>
+                                                </span>
+                                                <span>
+                                                    <p style="color: #fbc02d; margin-right: 4px;">★</p>
+                                                    <p>2</p>
+                                                    <div id="container_bar">
+                                                        <div id="container_progress" style=" width: 0%"></div>
+                                                    </div>
+                                                </span>
+                                                <span>
+                                                    <p style="color: #fbc02d; margin-right: 4px;">★</p>
+                                                    <p>1</p>
+                                                    <div id="container_bar">
+                                                        <div id="container_progress" style=" width: 0%"></div>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div id="review">
+                                            <div class="avaliação_product">
+                                                <span class="user-details">
+                                                    <div class='avatar_user' style="background-color: #05972a;">
+                                                        <p>L</p>
+                                                    </div>
+                                                    <span class='none_user'>Lucas Ferreira</span>
+                                                </span>
+                                                <div class="container_star avaliacao_cliente">
+                                                    <img src="imagens/Estrela.png" alt="">
+                                                    <img src="imagens/Estrela.png" alt="">
+                                                    <img src="imagens/Estrela.png" alt="">
+                                                    <img src="imagens/Estrela.png" alt="">
+                                                    <img src="imagens/Estrela.png" alt="">
+                                                </div>
+                                                <div class="reviews_desc">
+                                                    <p><strong>Produto de qualidade excelente!</strong></p>
+                                                    <p style="margin-top: 6px;">O produto é excelente, uso ele pra fazer stream de jogos no ps4 e valeu muito a pena. O head é confortável, o som limpo de modo que nos imerge no jogo e o microfone anti ruído funciona perfeitamente. Recomendo!.</p>
+                                                </div>
+                                            </div>
+                                            <div class="avaliação_product">
+                                                <span class="user-details">
+                                                    <div class='avatar_user' style="background-color: #fb7f2d;">
+                                                        <p>J</p>
+                                                    </div>
+                                                    <span class='none_user'>Jackson Eduardo</span>
+                                                </span>
+                                                <div class="container_star avaliacao_cliente">
+                                                    <img src="imagens/Estrela.png" alt="">
+                                                    <img src="imagens/Estrela.png" alt="">
+                                                    <img src="imagens/Estrela.png" alt="">
+                                                    <img src="imagens/Estrela.png" alt="">
+                                                    <img src="imagens/Estrela.png" alt="">
+                                                </div>
+                                                <div class="reviews_desc">
+                                                    <p><strong>A MELHOR LOJINHA GAMER...</strong></p>
+                                                    <p style="margin-top: 6px;">rapaz superou minhas expectativas.. de fracasso essa loja não tem nada.. exelente suporte, produto chegou dentro do prazo estipulado todas as vezes que chamei no chat me atenderam muito bem, produto original com caixa lacrado, o fone entrega o que promete sem reclamações no momento.</p>
+                                                </div>
+                                            </div>
+                                            <div class="avaliação_product">
+                                                <span class="user-details">
+                                                    <div class='avatar_user' style="background-color: #2d75fb;">
+                                                        <p>J</p>
+                                                    </div>
+                                                    <span class='none_user'> Jadilson Alves</span>
+                                                </span>
+                                                <div class="container_star avaliacao_cliente">
+                                                    <img src="imagens/Estrela.png" alt="">
+                                                    <img src="imagens/Estrela.png" alt="">
+                                                    <img src="imagens/Estrela.png" alt="">
+                                                    <img src="imagens/Estrela.png" alt="">
+                                                    <img src="imagens/Estrela.png" alt="">
+                                                </div>
+                                                <div class="reviews_desc">
+                                                    <p><strong>o melhor headset gamer de entrada 2022</strong></p>
+                                                    <p style="margin-top: 6px;">Produto bom, gostei d+, a qualidade do áudio e do microfone dele são boas, pra não dizer excelentes, recomendo pra quem joga jogo de tiro da pra ouvir os paço de longe</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div id="grid_product">
+            <div id="titulo_txt">
+                <h1>Produtos relacionados</h1>
+                <p>Até 60% de desconto</p>
+            </div>
+            <div id="container_grid">
+                <span id="container_2itens">
+                    <div class="item_grid hover_border">
+                        <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                        <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
+                        
+                        <span id="container_avaliacao">
+                            <div class="container_star">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/4,7Estrela.png" alt="">
+                            </div>
+                            <p id="avaliacao_product">56 avaliações</p>
+                        </span>
+
+                        <span id="container_diferencaPreco">
+                            <p id="precoAntigo">R$ 179,90</p>
+                            <p id="precoNovo">R$ 135,52</p>
+                        </span>
+                    </div>
+                    <div class="item_grid hover_border">
+                        <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                        <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
+                        
+                        <span id="container_avaliacao">
+                            <div class="container_star">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/4,7Estrela.png" alt="">
+                            </div>
+                            <p id="avaliacao_product">56 avaliações</p>
+                        </span>
+
+                        <span id="container_diferencaPreco">
+                            <p id="precoAntigo">R$ 179,90</p>
+                            <p id="precoNovo">R$ 135,52</p>
+                        </span>
+                    </div>
+                </span>
+                <span id="container_2itens">
+                    <div class="item_grid hover_border penultimoItem">
+                        <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                        <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
+                        
+                        <span id="container_avaliacao">
+                            <div class="container_star">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/4,7Estrela.png" alt="">
+                            </div>
+                            <p id="avaliacao_product">56 avaliações</p>
+                        </span>
+
+                        <span id="container_diferencaPreco">
+                            <p id="precoAntigo">R$ 179,90</p>
+                            <p id="precoNovo">R$ 135,52</p>
+                        </span>
+                    </div>
+                    <div class="item_grid hover_border ultimoItem">
+                        <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                        <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
+                        
+                        <span id="container_avaliacao">
+                            <div class="container_star">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/4,7Estrela.png" alt="">
+                            </div>
+                            <p id="avaliacao_product">56 avaliações</p>
+                        </span>
+
+                        <span id="container_diferencaPreco">
+                            <p id="precoAntigo">R$ 179,90</p>
+                            <p id="precoNovo">R$ 135,52</p>
+                        </span>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+
+        <hr>
+
+        
+        <div id="grid_product">
+            <div id="titulo_txt">
+                <h1>Talvez você goste</h1>
+                <p>Até 60% de desconto</p>
+            </div>
+            <div id="container_grid">
+                <span id="container_2itens">
+                    <div class="item_grid hover_border">
+                        <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                        <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
+                        
+                        <span id="container_avaliacao">
+                            <div class="container_star">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/4,7Estrela.png" alt="">
+                            </div>
+                            <p id="avaliacao_product">56 avaliações</p>
+                        </span>
+
+                        <span id="container_diferencaPreco">
+                            <p id="precoAntigo">R$ 179,90</p>
+                            <p id="precoNovo">R$ 135,52</p>
+                        </span>
+                    </div>
+                    <div class="item_grid hover_border">
+                        <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                        <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
+                        
+                        <span id="container_avaliacao">
+                            <div class="container_star">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/4,7Estrela.png" alt="">
+                            </div>
+                            <p id="avaliacao_product">56 avaliações</p>
+                        </span>
+
+                        <span id="container_diferencaPreco">
+                            <p id="precoAntigo">R$ 179,90</p>
+                            <p id="precoNovo">R$ 135,52</p>
+                        </span>
+                    </div>
+                </span>
+                <span id="container_2itens">
+                    <div class="item_grid hover_border penultimoItem">
+                        <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                        <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
+                        
+                        <span id="container_avaliacao">
+                            <div class="container_star">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/4,7Estrela.png" alt="">
+                            </div>
+                            <p id="avaliacao_product">56 avaliações</p>
+                        </span>
+
+                        <span id="container_diferencaPreco">
+                            <p id="precoAntigo">R$ 179,90</p>
+                            <p id="precoNovo">R$ 135,52</p>
+                        </span>                        </div>
+                    <div class="item_grid hover_border ultimoItem">
+                        <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                        <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
+                        
+                        <span id="container_avaliacao">
+                            <div class="container_star">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/4,7Estrela.png" alt="">
+                            </div>
+                            <p id="avaliacao_product">56 avaliações</p>
+                        </span>
+
+                        <span id="container_diferencaPreco">
+                            <p id="precoAntigo">R$ 179,90</p>
+                            <p id="precoNovo">R$ 135,52</p>
+                        </span>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+
+        <hr>
+        
+        <div id="mostBought_container">
             <div id="mostBought_item">
                 <section>
                     <div id="container_flex">
@@ -181,7 +584,7 @@
                                 </button>
 
                                 <div id="container_datalhes">
-                                    <button id="btn_maisDetalhes" onclick="MudaCor('white', 'btn_maisDetalhes'), appear('detalhesProduto', 'block')" onclick="appear('detalhesProduto', 'block')">
+                                    <button class="btn_maisDetalhes" id="moletom" onclick=" appear('detalhesProduto_moletom', 'block')" onclick="appear('detalhesProduto_moletom', 'block')">
                                         <span>
                                             <p>Detalhes do produto</p>
                                         </span>
@@ -189,7 +592,7 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16"><path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"></path></svg>
                                         </span>
                                     </button>
-                                    <div id="detalhesProduto">
+                                    <div class="detalhesProduto" id="detalhesProduto_moletom">
                                         <p>O Casaco de Moletom Galáxia Nebulosa da Nike é um produto com estética Streetwear e acabamento de alta qualidade. Produzida em malha 50% algodão e 50% poliéster, possui 315g/cm².  Por se tratar de um produto Premium, proporciona um toque super macio e confortável.</p>
                                         <br>
                                         <p>O seu tingimento é feito utilizando o método reativo, isso significa que esse processo apresenta, como principal característica, a fusão dos corantes e pigmentos com a fibra, reduzindo o desbotamento, ou perda significativa da cor original ao longo do tempo.</p>
@@ -210,7 +613,7 @@
                                 </div>
 
                                 <div id="container_clasificacao" style="margin-top: 10px;">
-                                    <button id="btn_avaliacoes"  onclick="MudaCor('white', 'btn_avaliacoes'), appear('avaliacaoProduto', 'flex')" onclick="appear('detalhesProduto', 'block')">
+                                    <button id="btn_avaliacoes"  onclick="appear('avaliacaoProduto_moletom', 'flex')" onclick="appear('detalhesProduto_moletom', 'block')">
                                         <span>
                                             <p>Avaliações de clientes</p>
                                         </span>
@@ -218,7 +621,7 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16"><path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"></path></svg>
                                         </span>
                                     </button>
-                                    <div id="avaliacaoProduto">
+                                    <div id="avaliacaoProduto_moletom">
                                         <div id="graficos">
                                             <p style="font-size: 24px;"> Avaliações de clientes </p>
                                             <p style="font-size: 40px;"> 4.7 </p>
@@ -337,93 +740,194 @@
             </div>
         </div>
 
-        <div id="recomendados_product">
-            <h1>Produtos relacionados</h1>
+
+        <div id="grid_product">
+            <div id="titulo_txt">
+                <h1>Lançamentos</h1>
+                <p>Até 34% Off, aproveite!</p>
+            </div>
             <div id="container_grid">
-                    <span id="container_2itens">
-                        <div class="item_grid hover_border">
-                            <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
-                            <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
-                            
-                            <span id="container_avaliacao">
-                                <div class="container_star">
-                                    <img src="imagens/Estrela.png" alt="">
-                                    <img src="imagens/Estrela.png" alt="">
-                                    <img src="imagens/Estrela.png" alt="">
-                                    <img src="imagens/Estrela.png" alt="">
-                                    <img src="imagens/4,7Estrela.png" alt="">
-                                </div>
-                                <p id="avaliacao_product">56 avaliações</p>
-                            </span>
+                <span id="container_2itens">
+                    <div class="item_grid hover_border">
+                        <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                        <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
+                        
+                        <span id="container_avaliacao">
+                            <div class="container_star">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/4,7Estrela.png" alt="">
+                            </div>
+                            <p id="avaliacao_product">56 avaliações</p>
+                        </span>
 
-                            <span id="container_diferencaPreco">
-                                <p id="precoAntigo">R$ 179,90</p>
-                                <p id="precoNovo">R$ 135,52</p>
-                            </span>
-                        </div>
-                        <div class="item_grid hover_border">
-                            <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
-                            <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
-                            
-                            <span id="container_avaliacao">
-                                <div class="container_star">
-                                    <img src="imagens/Estrela.png" alt="">
-                                    <img src="imagens/Estrela.png" alt="">
-                                    <img src="imagens/Estrela.png" alt="">
-                                    <img src="imagens/Estrela.png" alt="">
-                                    <img src="imagens/4,7Estrela.png" alt="">
-                                </div>
-                                <p id="avaliacao_product">56 avaliações</p>
-                            </span>
+                        <span id="container_diferencaPreco">
+                            <p id="precoAntigo">R$ 179,90</p>
+                            <p id="precoNovo">R$ 135,52</p>
+                        </span>
+                    </div>
+                    <div class="item_grid hover_border">
+                        <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                        <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
+                        
+                        <span id="container_avaliacao">
+                            <div class="container_star">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/4,7Estrela.png" alt="">
+                            </div>
+                            <p id="avaliacao_product">56 avaliações</p>
+                        </span>
 
-                            <span id="container_diferencaPreco">
-                                <p id="precoAntigo">R$ 179,90</p>
-                                <p id="precoNovo">R$ 135,52</p>
-                            </span>
-                        </div>
-                    </span>
-                    <span id="container_2itens">
-                        <div class="item_grid hover_border penultimoItem">
-                            <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
-                            <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
-                            
-                            <span id="container_avaliacao">
-                                <div class="container_star">
-                                    <img src="imagens/Estrela.png" alt="">
-                                    <img src="imagens/Estrela.png" alt="">
-                                    <img src="imagens/Estrela.png" alt="">
-                                    <img src="imagens/Estrela.png" alt="">
-                                    <img src="imagens/4,7Estrela.png" alt="">
-                                </div>
-                                <p id="avaliacao_product">56 avaliações</p>
-                            </span>
+                        <span id="container_diferencaPreco">
+                            <p id="precoAntigo">R$ 179,90</p>
+                            <p id="precoNovo">R$ 135,52</p>
+                        </span>
+                    </div>
+                </span>
+                <span id="container_2itens">
+                    <div class="item_grid hover_border penultimoItem">
+                        <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                        <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
+                        
+                        <span id="container_avaliacao">
+                            <div class="container_star">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/4,7Estrela.png" alt="">
+                            </div>
+                            <p id="avaliacao_product">56 avaliações</p>
+                        </span>
 
-                            <span id="container_diferencaPreco">
-                                <p id="precoAntigo">R$ 179,90</p>
-                                <p id="precoNovo">R$ 135,52</p>
-                            </span>                        </div>
-                        <div class="item_grid hover_border ultimoItem">
-                            <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
-                            <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
-                            
-                            <span id="container_avaliacao">
-                                <div class="container_star">
-                                    <img src="imagens/Estrela.png" alt="">
-                                    <img src="imagens/Estrela.png" alt="">
-                                    <img src="imagens/Estrela.png" alt="">
-                                    <img src="imagens/Estrela.png" alt="">
-                                    <img src="imagens/4,7Estrela.png" alt="">
-                                </div>
-                                <p id="avaliacao_product">56 avaliações</p>
-                            </span>
+                        <span id="container_diferencaPreco">
+                            <p id="precoAntigo">R$ 179,90</p>
+                            <p id="precoNovo">R$ 135,52</p>
+                        </span>                        </div>
+                    <div class="item_grid hover_border ultimoItem">
+                        <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                        <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
+                        
+                        <span id="container_avaliacao">
+                            <div class="container_star">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/4,7Estrela.png" alt="">
+                            </div>
+                            <p id="avaliacao_product">56 avaliações</p>
+                        </span>
 
-                            <span id="container_diferencaPreco">
-                                <p id="precoAntigo">R$ 179,90</p>
-                                <p id="precoNovo">R$ 135,52</p>
-                            </span>                        </div>
-                    </span>
+                        <span id="container_diferencaPreco">
+                            <p id="precoAntigo">R$ 179,90</p>
+                            <p id="precoNovo">R$ 135,52</p>
+                        </span>
+                    </div>
+                </span>
             </div>
         </div>
+        
+
+        <hr>        
+        
+        <div id="grid_product">
+            <div id="titulo_txt">
+                <h1>O upgrade que sua máquina precisa</h1>
+                <p>Combo de ofertas</p>
+            </div>
+            <div id="container_grid">
+                <span id="container_2itens">
+                    <div class="item_grid hover_border">
+                        <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                        <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
+                        
+                        <span id="container_avaliacao">
+                            <div class="container_star">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/4,7Estrela.png" alt="">
+                            </div>
+                            <p id="avaliacao_product">56 avaliações</p>
+                        </span>
+
+                        <span id="container_diferencaPreco">
+                            <p id="precoAntigo">R$ 179,90</p>
+                            <p id="precoNovo">R$ 135,52</p>
+                        </span>
+                    </div>
+                    <div class="item_grid hover_border">
+                        <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                        <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
+                        
+                        <span id="container_avaliacao">
+                            <div class="container_star">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/4,7Estrela.png" alt="">
+                            </div>
+                            <p id="avaliacao_product">56 avaliações</p>
+                        </span>
+
+                        <span id="container_diferencaPreco">
+                            <p id="precoAntigo">R$ 179,90</p>
+                            <p id="precoNovo">R$ 135,52</p>
+                        </span>
+                    </div>
+                </span>
+                <span id="container_2itens">
+                    <div class="item_grid hover_border penultimoItem">
+                        <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                        <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
+                        
+                        <span id="container_avaliacao">
+                            <div class="container_star">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/4,7Estrela.png" alt="">
+                            </div>
+                            <p id="avaliacao_product">56 avaliações</p>
+                        </span>
+
+                        <span id="container_diferencaPreco">
+                            <p id="precoAntigo">R$ 179,90</p>
+                            <p id="precoNovo">R$ 135,52</p>
+                        </span>                        </div>
+                    <div class="item_grid hover_border ultimoItem">
+                        <img src="https://img.mycartpanda.com/unsafe/640x640/https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                        <p>MOLETOM GALAXYA NEBULOSA - NIKE</p>
+                        
+                        <span id="container_avaliacao">
+                            <div class="container_star">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/Estrela.png" alt="">
+                                <img src="imagens/4,7Estrela.png" alt="">
+                            </div>
+                            <p id="avaliacao_product">56 avaliações</p>
+                        </span>
+
+                        <span id="container_diferencaPreco">
+                            <p id="precoAntigo">R$ 179,90</p>
+                            <p id="precoNovo">R$ 135,52</p>
+                        </span>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
 
         <hr>
     </main>
@@ -531,18 +1035,6 @@
                 document.getElementById('search_formUI2').style.display = 'none'
             }
             
-        }
-    
-        function MudaCor(cor, id_item) {
-            if(document.getElementById(id_item).style.backgroundColor == cor){
-                document.getElementById(id_item).style.backgroundColor = '#ffffff5e'
-                document.getElementById(id_item).style.borderBottomColor = 'rgba(0,0,0,.125)'
-
-            }else{
-                document.getElementById(id_item).style.backgroundColor = cor
-                document.getElementById(id_item).style.borderBottomColor = '#FFF'
-            }
-
         }
     
     </script>

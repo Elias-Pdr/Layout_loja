@@ -178,16 +178,16 @@ hr{
     width: 100%;
 }
 
-#mostBought_txt{
+#titulo_txt{
     margin: 30px;
     text-align: center;
 }
-#mostBought_txt h1{
-    font-size: 24px;
-    font-weight: normal;
-    margin-bottom: 6px;
+#titulo_txt h1{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
-#mostBought_txt p{
+#titulo_txt p{
     font-size: 16px;
     font-weight: normal;
     color: #6C757D;
@@ -223,7 +223,7 @@ hr{
 
 #container_item img{
     width: 100%;
-    border-radius: 6px;
+    border-radius: 20px;
 }
 
 #container_infos{
@@ -353,7 +353,7 @@ hr{
     border-radius: 6px;
 }
 
-#btn_maisDetalhes, #btn_avaliacoes{
+.btn_maisDetalhes, #btn_avaliacoes{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -367,24 +367,24 @@ hr{
     width: 100%;
 }
 
-#btn_maisDetalhes span, #btn_avaliacoes span{
+.btn_maisDetalhes span, #btn_avaliacoes span{
     margin: 0px 20px;
 }
 
-#detalhesProduto{
+.detalhesProduto{
     width: 84%;
     margin: 20px auto;
     display: none;
 }
-#detalhesProduto p, li{
+.detalhesProduto p, li{
     color: #4B4F58;
     font-size: 14px;
 }
-#detalhesProduto li{
+.detalhesProduto li{
     margin-left: 20px;
 }
 
-#avaliacaoProduto{
+#avaliacaoProduto_headset, #avaliacaoProduto_moletom{
     display: none;
     width: 100%;
     margin: auto;
@@ -392,7 +392,7 @@ hr{
     align-items: center;
     margin-top: 40px;
 }
-#avaliacaoProduto > p, #container_avaliacoes{
+#avaliacaoProduto_headset > p, #avaliacaoProduto_moletom > p, #container_avaliacoes{
     font-weight: bold;
     color: #212529;
 }
@@ -471,10 +471,6 @@ hr{
 
 
 
-#recomendados_product h1{
-    text-align: center;
-    margin: 20px 0px;
-}
 #container_grid{
     display: flex;
     flex-direction: row;
@@ -644,7 +640,7 @@ hr{
         margin: 10px 0px;
         width: 100%;
     }
-    #detalhesProduto{
+    .detalhesProduto{
         width: 82%;
         margin-top: 10px;
     }
@@ -660,13 +656,15 @@ hr{
     #container_item{
         width: 90%;
         margin: auto;
+        border-radius: 20px 20px 0px 0px;
+
     }
     #container_infos{
         width: 95%;
         margin: auto;
         margin-top: 30px;
     }
-    #detalhesProduto{
+    .detalhesProduto{
         width: 95%;
         margin-top: 10px;
     }
