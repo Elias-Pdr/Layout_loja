@@ -506,6 +506,26 @@ hr{
 .penultimoItem{
     width: 50%;
 }
+#container_diferencaPreco{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 5px 0px 10px 0px
+}
+#precoAntigo{
+    margin: 0px 5px;
+    font-size: 16px;
+    color: #6C757D;
+    text-decoration: line-through;
+}
+#precoNovo{
+    margin: 0px 5px;
+    font-size: 16px;
+    color: #29B62A;
+
+}
+
+
 #container_footer{
     display: flex;
     flex-direction: row;
