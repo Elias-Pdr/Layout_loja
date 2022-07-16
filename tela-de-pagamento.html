@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkout</title>
+    <link rel="stylesheet" href="style_checkout.css">
+</head>
+<body>
+    <header>
+        <div id="promocao">
+            <img alt="seguro" src="https://img.mycartpanda.com/unsafe/https://assets.mycartpanda.com/296914/5421/assets/Icon.svg">
+            <p style="color: white;"><strong>Pagamento 100% seguro</strong></p>
+        </div>
+    </header>
+    <main>
+        <div id="container_left">
+            <div>
+                <h1>Para quem devemos entregar o pedido?</h1>
+                <p>Informações da compra</p>
+                <div class="container_input" id="container_input_email" onclick="contoller_input('input_email', 'label_email', 'container_input_email')">
+                    <label id="label_email" for="email">Email*</label>
+                    <input type="email" name="email" id="input_email" placeholder="Email*">
+                </div>
+                <div class="container_input" id="container_input_nome" onclick="contoller_input('input_nome', 'label_nome', 'container_input_nome')">
+                    <label id="label_nome" for="nome">Nome completo*</label>
+                    <input type="text" name="nome" id="input_nome" placeholder="Nome completo*">
+                </div>
+                <div style="margin-right: 10px;" class="container_input" id="container_input_celular" onclick="contoller_input('input_celular', 'label_celular', 'container_input_celular')">
+                    <label id="label_celular" for="celular">Celular*</label>
+                    <input type="tel" name="celular" id="input_celular" placeholder="Celular*">
+                </div>
+
+
+                <h1>Informações de Entrega</h1>
+                <p>Para onde devemos entregar o pedido?</p>
+
+                <div class="container_2inputs">
+                    <div style="margin-right: 10px;" class="container_input" id="container_input_cep" onclick="contoller_input('input_cep', 'label_cep', 'container_input_cep')">
+                        <label id="label_cep" for="cep">CEP*</label>
+                        <input type="number" name="cep" id="input_cep" placeholder="CEP*">
+                    </div>
+                    <div class="container_input" id="container_input_numeroCasa" onclick="contoller_input('input_numeroCasa', 'label_numeroCasa', 'container_input_numeroCasa')">
+                        <label id="label_numeroCasa" for="numeroCasa">Numero**</label>
+                        <input type="number" name="numeroCasa" id="input_numeroCasa" placeholder="Numero*">
+                    </div>
+                </div>
+                <p style="margin-top: 10px;">Angra dos Reis/RJ</p>
+
+                <h1>Método de Envio</h1>
+                <p>Escolha o seu método de entrega abaixo</p>
+
+                <div style="margin-right: 10px;" class="container_input frete">
+                    <span style="display: flex; align-items: center;">
+                        <div class="radio" style='border: 6px solid #40b76a;'></div>
+                        <p>Frete Grátis</p>
+                    </span>
+                    <p style="margin-right: 10px;">R$ 0,00</p>
+                </div>
+
+                <h1>Seu pagamento será processado pelo Mercado Pago</h1>
+                <p>Postaremos seu pedido em até 48horas.</p>
+
+                
+                <div style="margin-right: 10px;" class="container_input frete" id="container_boleto" onclick="formaPagamento('boleto'), appear('infos_boleto', 'block')">
+                    <span style="display: flex; align-items: center;">
+                        <div class="radio" id="boleto"></div>
+                        <p><strong>Boleto -5%</strong></p>
+                    </span>
+                    <p style="margin-right: 10px;">R$ Preço -5%</p>
+                </div>
+                
+                <div class="container_infosPagamento" id="infos_boleto">
+                    <p>Clique em "Finalizar Compra" para gerar o seu boleto.</p>
+                    <br>
+                    <p>Informações sobre o pagamento via boleto:</p>
+                    <ul>
+                        <li>Valor à vista R$Preço</li>
+                        <li>Não pode ser parcelado! Use cartão de crédito para parcelar sua compra</li>
+                        <li>Prazo de até 3 dias úteis para compensar</li>
+                    </ul>
+                </div>
+
+                <div style="margin-right: 10px;" class="container_input frete" id="container_pix" onclick="formaPagamento('pix'), appear('infos_pix', 'block')">
+                    <span style="display: flex; align-items: center;">
+                        <div class="radio" id="pix"></div>
+                        <p><strong>Pix</strong></p>
+                    </span>
+                    <p style="margin-right: 10px;">R$ Preço</p>
+                </div>
+
+                <div class="container_infosPagamento" id="infos_pix">
+                    <p>Clique em "Finalizar Compra" para gerar o PIX.</p>
+                    <br>
+                    <p>Informações sobre o pagamento via PIX:</p>
+                    <ul>
+                        <li>Valor à vista R$Preço</li>
+                        <li>Não pode ser parcelado! Use cartão de crédito para parcelar sua compra</li>
+                        <li>Prazo de até 30 minutos para compensar</li>
+                    </ul>
+                </div>
+
+
+
+                <div style="margin-right: 10px;" class="container_input frete" id="container_cartao" onclick="formaPagamento('cartao'), appear('infos_cartao', 'block')">
+                    <span style="display: flex; align-items: center;">
+                        <div class="radio" id="cartao" ></div>
+                        <p><strong>Cartão de crédito</strong></p>
+                    </span>
+                    <p style="margin-right: 10px;">5x de R$ Preço</p>
+                </div>
+
+                <div class="container_infosPagamento" id="infos_cartao">
+                    <p>Indisponivel no momento! Tente novamente mais tarde.</p>
+                </div>
+
+                <div class="col-md-12 submit_button">
+                    <button class="style_button" id="complete-payment" style="">
+                        <div class="disp-flex">
+                            <svg style="width: 14px;" aria-hidden="true" data-prefix="fas" data-icon="lock-alt" class="svg-inline--fa fa-lock-alt fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zM264 392c0 22.1-17.9 40-40 40s-40-17.9-40-40v-48c0-22.1 17.9-40 40-40s40 17.9 40 40v48zm32-168H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path></svg>
+                            <span data-realtime="checkout_button.title">
+                                Finalizar compra
+                            </span>
+                        </div>
+                    </button>
+                    <button type="submit" style="background-color: rgb(0, 210, 92); display: none;" class="" id="loader-button">
+                        <img style="max-width: 45px;" src="/images/spinner.gif">
+                    </button>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+        <div id="container_right">
+            <div class="view_item">
+                <div class="view_item_top">
+                    <img src="https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                    <div class="view_txt_top">
+                        <p id="nomeProduto">MOLETOM GALAXYA NEBULOSA - NIKE</p>
+                        <input type="text"placeholder="Tem um cupom de desconto?">
+                    </div>
+                </div>
+                <div id="footer_view_item">
+                    <hr>
+                    <div class="view_item_buttom">
+                        <p style="margin-left: 10px;" >Subtotal</p>
+                        <p style="margin-right: 10px;" id="preçoProduto">R$ preço</p>
+                    </div>
+                    <div class="view_item_buttom">
+                        <p style="margin-left: 10px;" >Frete</p>
+                        <p style="margin-right: 10px;">R$ 0,00</p>
+                    </div>
+                    <div class="view_item_buttom">
+                        <p style="margin-left: 10px;" >Desconto por boleto</p>
+                        <p style="margin-right: 10px;" id="descontoBoleto">---</p>
+                    </div>
+                    <div class="view_item_buttom">
+                        <p style="margin-left: 10px;" >Cupom de desconto</p>
+                        <p style="margin-right: 10px;">---</p>
+                    </div>
+                    <div class="view_item_buttom">
+                        <p style="margin-left: 10px;" ><strong>Total</strong></p>
+                        <p style="margin-right: 10px;" id="precoFinal"><strong>---</strong></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        function contoller_input(id_input, id_label, id_container){
+            const allContainer = document.querySelectorAll('.container_input')
+            console.log(allContainer.length);
+
+            for (let i = 0; i < allContainer.length; i++) {
+                const containers = allContainer[i];
+                containers.style.border = '1px solid rgba(0, 0, 0, 0.199)'
+            }
+
+            const label = document.getElementById(id_label)
+            const input = document.getElementById(id_input)
+            const container = document.getElementById(id_container)
+
+            label.style.display = 'block'
+            input.style.height = '70%'
+            input.placeholder = ' '
+            container.style.border = '1px solid red'
+        }
+        function formaPagamento(pagamento){
+            const pix = document.getElementById('pix')
+            const boleto = document.getElementById('boleto')
+            const cartao = document.getElementById('cartao')
+            
+            pix.style.border = '2px solid #6D7175'
+            boleto.style.border = '2px solid #6D7175'
+            cartao.style.border = '2px solid #6D7175'
+            document.getElementById('container_pix').style.borderRadius = '10px 10px 10px 10px'
+            document.getElementById('container_boleto').style.borderRadius = '10px 10px 10px 10px'
+            document.getElementById('container_cartao').style.borderRadius = '10px 10px 10px 10px'
+            document.getElementById('container_pix').style.borderBottom = '1px solid rgba(0, 0, 0, 0.199)'
+            document.getElementById('container_boleto').style.borderBottom = '1px solid rgba(0, 0, 0, 0.199)'
+            document.getElementById('container_cartao').style.borderBottom = '1px solid rgba(0, 0, 0, 0.199)'
+
+            document.getElementById(pagamento).style.border = '6px solid #40b76a'
+            document.getElementById('container_'+pagamento).style.borderRadius = '10px 10px 0px 0px'
+            document.getElementById('container_'+pagamento).style.borderBottom = 'none'
+            
+            if(pagamento == 'boleto'){
+                console.log(pagamento);
+                document.getElementById('descontoBoleto').innerHTML = 'R$ preço -5%'
+                document.getElementById('precoFinal').innerHTML = 'R$ preço -5%'
+            }else{
+                document.getElementById('descontoBoleto').innerHTML = '---'
+                document.getElementById('precoFinal').innerHTML = '---'
+                
+            }
+        }
+        function appear(id_obj, displayType) {
+            document.getElementById('infos_pix').style.display = 'none'
+            document.getElementById('infos_boleto').style.display = 'none'
+            document.getElementById('infos_cartao').style.display = 'none'
+
+            if(document.getElementById(id_obj).style.display == 'block' || document.getElementById(id_obj).style.display == 'flex'){
+                document.getElementById(id_obj).style.display = 'none'
+            }else{
+                document.getElementById(id_obj).style.display = displayType
+            }
+        }
+    </script>
+</body>
+</html>
