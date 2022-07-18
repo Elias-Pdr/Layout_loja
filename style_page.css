@@ -260,7 +260,7 @@ hr{
 #economia_product span{
     font-weight: bold;
 }
-#nome_product{
+.nome_product{
     font-size: 32px;
 }
 .container_star{
@@ -280,7 +280,7 @@ hr{
     margin-left: 8px;
 
 }
-#precoAntigo_product{
+.precoAntigo_product{
     font-size: 16px;
     color: #B3B3B3;
     font-weight: 500;
@@ -288,7 +288,7 @@ hr{
     text-decoration: line-through;
 
 }
-#precoAtual_product{
+.precoAtual_product{
     font-size: 28px;
     color: #29B62A;
     font-weight: 800;
@@ -458,7 +458,7 @@ hr{
     width: 80%;
     margin-left: 10px;
 }
-#container_progress{
+.container_progress{
     background-color: #2d75fb;
     height: 10px;
 
@@ -491,6 +491,7 @@ hr{
     padding: 10px;
     text-align: center;
     border-radius: 15px;
+    min-width: 270px;
 }
 .item_grid img{
     width: 100%;
@@ -508,13 +509,13 @@ hr{
     justify-content: center;
     margin: 5px 0px 10px 0px
 }
-#precoAntigo{
+.precoAntigo{
     margin: 0px 5px;
     font-size: 16px;
     color: #6C757D;
     text-decoration: line-through;
 }
-#precoNovo{
+.precoNovo{
     margin: 0px 5px;
     font-size: 16px;
     color: #29B62A;

@@ -7,13 +7,14 @@
     <title>checkout</title>
     <link rel="stylesheet" href="style_checkout.css">
 </head>
-<body>
+<body onload="setup()">
     <header>
         <div id="promocao">
             <img alt="seguro" src="https://img.mycartpanda.com/unsafe/https://assets.mycartpanda.com/296914/5421/assets/Icon.svg">
             <p style="color: white;"><strong>Pagamento 100% seguro</strong></p>
         </div>
     </header>
+
     <main>
         <div id="container_left">
             <div>
@@ -21,15 +22,15 @@
                 <p>Informações da compra</p>
                 <div class="container_input" id="container_input_email" onclick="contoller_input('input_email', 'label_email', 'container_input_email')">
                     <label id="label_email" for="email">Email*</label>
-                    <input type="email" name="email" id="input_email" placeholder="Email*">
+                    <input class="input_style" type="email" name="email" id="input_email" placeholder="Email*">
                 </div>
                 <div class="container_input" id="container_input_nome" onclick="contoller_input('input_nome', 'label_nome', 'container_input_nome')">
                     <label id="label_nome" for="nome">Nome completo*</label>
-                    <input type="text" name="nome" id="input_nome" placeholder="Nome completo*">
+                    <input class="input_style" type="text" name="nome" id="input_nome" placeholder="Nome completo*">
                 </div>
                 <div style="margin-right: 10px;" class="container_input" id="container_input_celular" onclick="contoller_input('input_celular', 'label_celular', 'container_input_celular')">
                     <label id="label_celular" for="celular">Celular*</label>
-                    <input type="tel" name="celular" id="input_celular" placeholder="Celular*">
+                    <input class="input_style" type="tel" name="celular" id="input_celular" placeholder="Celular*">
                 </div>
 
 
@@ -39,11 +40,11 @@
                 <div class="container_2inputs">
                     <div style="margin-right: 10px;" class="container_input" id="container_input_cep" onclick="contoller_input('input_cep', 'label_cep', 'container_input_cep')">
                         <label id="label_cep" for="cep">CEP*</label>
-                        <input type="number" name="cep" id="input_cep" placeholder="CEP*">
+                        <input class="input_style" type="number" name="cep" id="input_cep" placeholder="CEP*">
                     </div>
                     <div class="container_input" id="container_input_numeroCasa" onclick="contoller_input('input_numeroCasa', 'label_numeroCasa', 'container_input_numeroCasa')">
-                        <label id="label_numeroCasa" for="numeroCasa">Numero**</label>
-                        <input type="number" name="numeroCasa" id="input_numeroCasa" placeholder="Numero*">
+                        <label id="label_numeroCasa" for="numeroCasa">Numero*</label>
+                        <input class="input_style" type="number" name="numeroCasa" id="input_numeroCasa" placeholder="Numero*">
                     </div>
                 </div>
                 <p style="margin-top: 10px;">Angra dos Reis/RJ</p>
@@ -68,7 +69,7 @@
                         <div class="radio" id="boleto"></div>
                         <p><strong>Boleto -5%</strong></p>
                     </span>
-                    <p style="margin-right: 10px;">R$ Preço -5%</p>
+                    <p style="margin-right: 10px;" id="descontoBoleto">R$ Preço -5%</p>
                 </div>
                 
                 <div class="container_infosPagamento" id="infos_boleto">
@@ -87,7 +88,7 @@
                         <div class="radio" id="pix"></div>
                         <p><strong>Pix</strong></p>
                     </span>
-                    <p style="margin-right: 10px;">R$ Preço</p>
+                    <p style="margin-right: 10px;" id="precoPorPix">R$ Preço</p>
                 </div>
 
                 <div class="container_infosPagamento" id="infos_pix">
@@ -108,14 +109,14 @@
                         <div class="radio" id="cartao" ></div>
                         <p><strong>Cartão de crédito</strong></p>
                     </span>
-                    <p style="margin-right: 10px;">5x de R$ Preço</p>
+                    <p style="margin-right: 10px;">Carregando...</p>
                 </div>
 
                 <div class="container_infosPagamento" id="infos_cartao">
                     <p>Indisponivel no momento! Tente novamente mais tarde.</p>
                 </div>
 
-                <div id="btn_finalizar1">
+                <div id="btn_finalizar1" onclick="finalizarCompra()">
                     <button class="style_button">
                         <div class="disp-flex">
                             <svg style="width: 14px;" aria-hidden="true" data-prefix="fas" data-icon="lock-alt" class="svg-inline--fa fa-lock-alt fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zM264 392c0 22.1-17.9 40-40 40s-40-17.9-40-40v-48c0-22.1 17.9-40 40-40s40 17.9 40 40v48zm32-168H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path></svg>
@@ -124,6 +125,7 @@
                             </span>
                         </div>
                     </button>
+                    <p id="mensagemErro">Preencha todas as informações*</p>
                 </div>
 
 
@@ -138,10 +140,10 @@
         <div id="container_right">
             <div class="view_item">
                 <div class="view_item_top">
-                    <img src="https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
+                    <img id="caminhoImagem" src="https://assets.mycartpanda.com/static/products_images/38/6b/b3/1653693534.png" alt="">
                     <div class="view_txt_top">
                         <p id="nomeProduto">MOLETOM GALAXYA NEBULOSA - NIKE</p>
-                        <p id="estimativaEntrega">Chegará entre: <strong>18</strong> e <strong>23 de julho</strong>.</p>
+                        <p id="estimativaEntrega">Chegará entre: <strong id="HojeMais5">18</strong> e <strong id="HojeMais10">23 de julho</strong></p>
                                 
                         <div id="garantia_txt">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -168,8 +170,8 @@
                 <div class="cupomDesconto">
                     <p>Tem um cupom de desconto?</p>
                     <span>
-                        <input type="text"placeholder="Cupom de desconto">
-                        <button>APLICAR</button>
+                        <input type="text" id="cupom_txt" placeholder="Cupom de desconto">
+                        <button onclick="descontoCupom('cupom_txt')">APLICAR</button>
                     </span>
                 </div>
 
@@ -177,7 +179,7 @@
                     <hr class="hr_footer">
                     <div class="view_item_buttom">
                         <p style="margin-left: 10px;" >Subtotal</p>
-                        <p style="margin-right: 10px;" id="preçoProduto">R$ preço</p>
+                        <p style="margin-right: 10px;" id="subTotal">R$ ---</p>
                     </div>
                     <div class="view_item_buttom">
                         <p style="margin-left: 10px;" >Frete</p>
@@ -185,20 +187,20 @@
                     </div>
                     <div class="view_item_buttom">
                         <p style="margin-left: 10px;" >Desconto por boleto</p>
-                        <p style="margin-right: 10px;" id="descontoBoleto">---</p>
+                        <p style="margin-right: 10px;" id="precoPorBoleto">---</p>
                     </div>
                     <div class="view_item_buttom">
                         <p style="margin-left: 10px;" >Cupom de desconto</p>
-                        <p style="margin-right: 10px;">---</p>
+                        <p style="margin-right: 10px;" id="descontoComCupom">---</p>
                     </div>
                     <div class="view_item_buttom">
                         <p style="margin-left: 10px;" ><strong>Total</strong></p>
-                        <p style="margin-right: 10px;" id="precoFinal"><strong>---</strong></p>
+                        <p style="margin-right: 10px;" ><strong id="valorTotal">---</strong></p>
                     </div>
                 </div>
 
             </div>
-            <div id="btn_finalizar2">
+            <div id="btn_finalizar2" onclick="finalizarCompra()">
                 <button class="style_button">
                     <div class="disp-flex">
                         <svg style="width: 14px;" aria-hidden="true" data-prefix="fas" data-icon="lock-alt" class="svg-inline--fa fa-lock-alt fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zM264 392c0 22.1-17.9 40-40 40s-40-17.9-40-40v-48c0-22.1 17.9-40 40-40s40 17.9 40 40v48zm32-168H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path></svg>
@@ -207,6 +209,7 @@
                         </span>
                     </div>
                 </button>
+                <p id="mensagemErro2">Preencha todas as informações*</p>
             </div>
 
         </div>
@@ -224,9 +227,102 @@
     </footer>
 
     <script>
+        let formaDEPagamento = ''
+        
+        let nomeItem = document.getElementById('nomeProduto')
+        nomeItem.innerHTML = localStorage.getItem('nomeItem')
+
+        let precoItem = document.getElementById('subTotal')
+        precoItem.innerHTML = 'R$ ' + localStorage.getItem('precoItem').replace('.', ',')
+
+        let data = new Date()
+        let dia = data.getDate()
+        let mês = data.getMonth()+1
+
+        if(dia + 5 > 30){
+            document.getElementById("HojeMais5").innerHTML = (dia + 5) - 30
+        }
+        else{
+            document.getElementById("HojeMais5").innerHTML = dia + 5
+        }
+
+        switch(mês){
+            case 1:
+                mês = 'janeiro'
+                break;
+            case 2:
+                mês = 'fevereiro'
+                break
+            case 3:
+                mês = 'março'
+                break;
+            case 4:
+                mês = 'abril'
+                break
+            case 5:
+                mês = 'maio'
+                break;
+            case 6:
+                mês = 'junho'
+                break
+            case 7:
+                mês = 'julho'
+                break;
+            case 8:
+                mês = 'agosto'
+                break
+            case 9:
+                mês = 'setembro'
+                break;
+            case 10:
+                mês = 'outubro'
+                break
+            case 11:
+                mês = 'novembro'
+                break;
+            case 12:
+                mês = 'dezembro'
+                break
+
+        }
+
+        if(dia + 10 > 30){
+            document.getElementById("HojeMais10").innerHTML = (dia + 10) - 30
+            document.getElementById("HojeMais10").innerHTML += ' de ' + mês
+        }else{
+            document.getElementById("HojeMais10").innerHTML = dia + 10
+            document.getElementById("HojeMais10").innerHTML += ' de ' + mês
+        }
+
+        function setup(){
+            
+            document.getElementById('precoPorPix').innerHTML  = document.getElementById('subTotal').innerHTML
+            document.getElementById('descontoBoleto').innerHTML  = '-R$ '
+            document.getElementById('descontoBoleto').innerHTML  += (parseFloat(localStorage.getItem('precoItem')) * 5)/100
+            document.getElementById('descontoBoleto').innerHTML  = document.getElementById('descontoBoleto').innerHTML.replace('.', ',')
+            
+            document.getElementById('caminhoImagem').src = localStorage.getItem('img_viewRelacionado')
+            
+            if(formaDEPagamento =='boleto'){
+                document.getElementById('precoPorBoleto').innerHTML  = document.getElementById('descontoBoleto').innerHTML
+                document.getElementById('valorTotal').innerHTML  = 'R$ '
+                document.getElementById('valorTotal').innerHTML  += parseFloat(localStorage.getItem('precoItem')) - (parseFloat(localStorage.getItem('precoItem')) * 5)/100
+                document.getElementById('valorTotal').innerHTML  += ' BRL'
+                document.getElementById('valorTotal').innerHTML  = document.getElementById('valorTotal').innerHTML.replace('.', ',')
+            }
+            else{
+                document.getElementById('precoPorBoleto').innerHTML  = '---'
+                document.getElementById('valorTotal').innerHTML  = document.getElementById('subTotal').innerHTML + ' BRL'
+                document.getElementById('valorTotal').innerHTML  = document.getElementById('valorTotal').innerHTML.replace('.', ',')
+            }
+          
+        }
+        
         function contoller_input(id_input, id_label, id_container){
             const allContainer = document.querySelectorAll('.container_input')
             console.log(allContainer.length);
+
+            document.getElementById(id_container).style.backgroundColor = 'transparent'
 
             for (let i = 0; i < allContainer.length; i++) {
                 const containers = allContainer[i];
@@ -260,16 +356,22 @@
             document.getElementById(pagamento).style.border = '6px solid #40b76a'
             document.getElementById('container_'+pagamento).style.borderRadius = '10px 10px 0px 0px'
             document.getElementById('container_'+pagamento).style.borderBottom = 'none'
-            
-            if(pagamento == 'boleto'){
-                console.log(pagamento);
-                document.getElementById('descontoBoleto').innerHTML = 'R$ preço -5%'
-                document.getElementById('precoFinal').innerHTML = 'R$ preço -5%'
+
+            console.log(pagamento);
+            formaDEPagamento = pagamento
+
+
+            if(formaDEPagamento == 'cartao'){
+                document.getElementById('mensagemErro').style.display = 'block'
+                document.getElementById('mensagemErro2').style.display = 'block'
+                document.getElementById('mensagemErro').innerHTML = 'Selecione outra forma de pagamento*'
+                document.getElementById('mensagemErro2').innerHTML = 'Selecione outra forma de pagamento*'
             }else{
-                document.getElementById('descontoBoleto').innerHTML = '---'
-                document.getElementById('precoFinal').innerHTML = '---'
-                
+                document.getElementById('mensagemErro').style.display = 'none'
+                document.getElementById('mensagemErro2').style.display = 'none'
+
             }
+            setup()
         }
         function appear(id_obj, displayType) {
             document.getElementById('infos_pix').style.display = 'none'
@@ -280,6 +382,98 @@
                 document.getElementById(id_obj).style.display = 'none'
             }else{
                 document.getElementById(id_obj).style.display = displayType
+            }
+        }
+        
+        function finalizarCompra(){
+
+            let inputs = document.querySelectorAll('.container_input')
+
+            if(formaDEPagamento == ''){
+                document.getElementById('mensagemErro').style.display = 'block'
+                document.getElementById('mensagemErro2').style.display = 'block'
+                document.getElementById('mensagemErro').innerHTML = 'Selecione uma forma de pagamento*'
+                document.getElementById('mensagemErro2').innerHTML = 'Selecione uma forma de pagamento*'
+            }
+
+            for (let i = 0; i < 5; i++) {
+                const container_input = inputs[i].id;
+
+                switch (container_input) {
+
+                    case 'container_input_email':
+                        if(document.getElementById('input_email').value == ''){
+                            document.getElementById('mensagemErro').style.display = 'block'
+                            document.getElementById('mensagemErro2').style.display = 'block'
+                            document.getElementById('mensagemErro').innerHTML = 'Preencha todas as informações*'
+                            document.getElementById('mensagemErro2').innerHTML = 'Preencha todas as informações**'
+
+
+                            document.getElementById('container_input_email').style.backgroundColor = '#ff00002e'
+                        }
+                        break;
+
+                    case 'container_input_nome':
+                        if(document.getElementById('input_nome').value == ''){
+                            document.getElementById('mensagemErro').style.display = 'block'
+                            document.getElementById('mensagemErro2').style.display = 'block'
+                            document.getElementById('mensagemErro').innerHTML = 'Preencha todas as informações*'
+                            document.getElementById('mensagemErro2').innerHTML = 'Preencha todas as informações**'
+
+
+                            document.getElementById('container_input_nome').style.backgroundColor = '#ff00002e'
+                        }
+                        break;
+
+                    case 'container_input_celular':
+                        if(document.getElementById('input_celular').value == ''){
+                            document.getElementById('mensagemErro').style.display = 'block'
+                            document.getElementById('mensagemErro2').style.display = 'block'
+                            document.getElementById('mensagemErro').innerHTML = 'Preencha todas as informações*'
+                            document.getElementById('mensagemErro2').innerHTML = 'Preencha todas as informações**'
+
+
+                            document.getElementById('container_input_celular').style.backgroundColor = '#ff00002e'
+                        }
+                        break;
+
+                    case 'container_input_cep':
+                        if(document.getElementById('input_cep').value == ''){
+                            document.getElementById('mensagemErro').style.display = 'block'
+                            document.getElementById('mensagemErro2').style.display = 'block'
+                            document.getElementById('mensagemErro').innerHTML = 'Preencha todas as informações*'
+                            document.getElementById('mensagemErro2').innerHTML = 'Preencha todas as informações**'
+
+
+                            document.getElementById('container_input_cep').style.backgroundColor = '#ff00002e'
+                        }
+                        break;
+
+                    case 'container_input_numeroCasa':
+                        if(document.getElementById('input_numeroCasa').value == ''){
+                            document.getElementById('mensagemErro').style.display = 'block'
+                            document.getElementById('mensagemErro2').style.display = 'block'
+                            document.getElementById('mensagemErro').innerHTML = 'Preencha todas as informações*'
+                            document.getElementById('mensagemErro2').innerHTML = 'Preencha todas as informações**'
+
+
+                            document.getElementById('container_input_numeroCasa').style.backgroundColor = '#ff00002e'
+                        }
+                        break;                
+                    }
+                
+                
+            }
+        
+
+        }
+        function descontoCupom(cupom) {
+            if (document.getElementById(cupom).value == 'CUPOM10') {
+                //MENOS10
+                //preço - sla oq
+                document.getElementById('descontoComCupom').innerHTML = '-80%'
+            }else{
+                document.getElementById('descontoComCupom').innerHTML = '---'
             }
         }
     </script>
